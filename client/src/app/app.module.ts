@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { Ng5SliderModule } from 'ng5-slider';
 import { HotelDealsPageComponent } from './hotel-deals-page/hotel-deals-page.component';
 import { HotelDealComponent } from './hotel-deals-page/hotel-deal/hotel-deal.component';
+import { HotelDealsService } from './services/hotel-deals.service';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HotelDealComponent } from './hotel-deals-page/hotel-deal/hotel-deal.com
     Ng5SliderModule
   ],
   providers: [
+    HotelDealsService
   ],
   bootstrap: [AppComponent]
 })
