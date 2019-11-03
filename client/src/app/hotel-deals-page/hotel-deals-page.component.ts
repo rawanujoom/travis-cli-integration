@@ -54,7 +54,7 @@ export class HotelDealsPageComponent implements OnInit {
 		let filters = {};
 		// add regular filters
 		for (let key in this.formFilters) {
-			if (this.formFilters[key]) {
+			if (this.formFilters[key] != null) {
 				filters[key] = this.formFilters[key];
 			}
 		};
