@@ -1,0 +1,52 @@
+.deal {
+	padding: 0 10px 0 0;
+	border: solid 1px #eee;
+	position: relative;
+	background: #FFF;
+	margin: 5px 0;
+}
+img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    left: 0;
+}
+.no-padding {
+	padding: 0;
+}
+.crossed-out {
+    text-decoration: line-through;
+    font-size: 13px;
+    color: #8e8e8e;
+    margin-right: 3px;
+}
+.price-info {
+    padding-right: 10px;
+}
+.price {
+    font-weight: 800;
+}
+.per-night {
+    font-size: 10px;
+    color:#8e8e8e;
+    margin-top: -3px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+.total-price {
+    font-size: 10px;
+    color:#000;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.saving {
+    margin-top: 10px;
+    font-size: 11px;
+}
+.rating {
+    margin-top: 13px;
+    margin-bottom: 5px;
+    margin-left: -10px;
+}

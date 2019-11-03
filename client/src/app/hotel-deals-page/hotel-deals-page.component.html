@@ -53,8 +53,8 @@
 	
 	<div class="deals">
 		<small *ngIf="deals.length > 0">Found {{deals.length}} Hotels</small>
-		<div *ngFor="let hotel ofdealsdeals">
-			<app-hotel-deal>
+		<div *ngFor="let hotel of deals">
+			<app-hotel-deal [hotel]="hotel" [numberOfstayNights]="formFilters.lengthOfStay">
 			</app-hotel-deal>
 		</div>
 	</div>

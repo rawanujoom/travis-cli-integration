@@ -1,1 +1,29 @@
-<p>hotel-deal works!</p>
+<div *ngIf="hotel['hotelInfo'].hotelName" class="row deal">
+	<div class="col-3 no-padding">
+		<img src="{{hotel['hotelInfo'].hotelImageUrl}}" width="150" height="150">
+	</div>
+	<div class="col-9 no-padding">
+			<div class="row">	
+				<div class="col-7 no-padding">
+					<h5><a target="_blank" href="{{hotel.url}}">{{hotel['hotelInfo'].hotelName}}</a></h5>
+					<div><strong>{{hotel['destination'].city}} {{hotel['destination'].country}}</strong></div>
+					<div><small>{{hotel['hotelInfo'].hotelStreetAddress}}</small></div>
+				</div>
+				<div class="col-5 text-right price-info">
+					<div>
+						<span class="crossed-out">{{hotel['hotelPricingInfo'].crossOutPriceValue}} {{hotel['hotelPricingInfo'].currency}}</span>
+						<span class="price">{{hotel['hotelPricingInfo'].displayPriceValue}} {{hotel['hotelPricingInfo'].currency}}</span>
+					</div>
+					<div class="per-night">per night</div>
+					<div class="total-price" *ngIf="numberOfstayNights > 0">{{hotel['hotelPricingInfo'].totalPriceValue}} {{hotel['hotelPricingInfo'].currency}} for {{numberOfstayNights}} nights</div>
+					<div class="saving" *ngIf="hotel['hotelPricingInfo'].crossOutPriceValue">Saving {{hotel['hotelPricingInfo'].percentSavings}} %</div>
+				</div>
+		</div>
+		<div class="rating">
+			<div><small>Stars: {{hotel['hotelInfo'].hotelStarRating}}<span *ngIf="hotel['hotelInfo'].hotelStarRating">/5.0</span></small>
+			</div>
+			<div><small>Guest Review: {{hotel['hotelInfo'].hotelGuestReviewRating}}<span *ngIf="hotel['hotelInfo'].hotelGuestReviewRating">/5.0</span></small>
+			</div>
+		</div>
+	</div>
+</div>
