@@ -1,1 +1,66 @@
-<p>hotel-deals-page works!</p>
+<div class="hotel-deals">
+	<div>
+		<h4>Find the Best Hotel Deals</h4>
+	</div>
+	<form class="filters" name="deals-form" (onSubmit)="filterHotelDeals()">
+		<div class="form-group">
+			<label for="hotel-destination">Going To:</label>
+			<input
+				placeholder="Destination, City, or region IDs"
+				class="form-control" 
+				name="hotel-destination"
+				id="hotel-destination"
+				type="text"
+				[(ngModel)]="destination">
+		</div>
+		<div class="form-group row">
+			<div class="col-6">
+				<label for="hotel-check-in">Check-in:</label>
+				<input type="text" id="hotel-check-in" class="form-control" placeholder="mm/dd/yyyy" name="hotel-check-in" [(ngModel)]="formFilters.minTripStartDate" bsDatepicker #d1="bsDatepicker" [bsConfig]="{containerClass: 'theme-dark-blue'}">
+			</div>
+			<div class="col-6">
+				<label>Check-out:</label>
+				<input type="text" id="" class="form-control" placeholder="mm/dd/yyyy" name="hotel-check-out" [(ngModel)]="formFilters.maxTripStartDate" bsDatepicker #d1="bsDatepicker" [bsConfig]="{containerClass: 'theme-dark-blue'}">
+			</div>
+		</div>
+		<div class="form-group">
+			<label>Length Of Stay:</label>
+			<input class="form-control" name="hotel-travelers" [(ngModel)]="formFilters.lengthOfStay">
+		</div>
+		<div class="form-group row">
+			<div class="col-6">
+				<label>Minimum Total Room Rate:</label>
+				<input class="form-control" name="hotel-travelers" [(ngModel)]="formFilters.minTotalRate">
+			</div>
+			<div class="col-6">
+				<label>Maximum Total Room Rate:</label>
+				<input class="form-control" name="hotel-travelers" [(ngModel)]="formFilters.maxTotalRate">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="hotel-stars">Stars Rating</label>
+			<ng5-slider id="hotel-stars" [(value)]="formFilters.minStarRating" [(highValue)]="formFilters.maxStarRating" [options]="starRateOptions"></ng5-slider>
+		</div>
+		<div class="form-group">
+			<label for="hotel-guest-rate">Guest Rate</label>
+			<ng5-slider [(value)]="formFilters.minGuestRating" [(highValue)]="formFilters.maxGuestRating" [options]="guestRateOptions"></ng5-slider>
+		</div>
+
+		<div class="text-right">
+			<button class="btn btn-primary" type="submit">Search</button>
+		</div>
+	</form>
+	
+	<div class="deals">
+		<small *ngIf="deals.length > 0">Found {{deals.length}} Hotels</small>
+		<div *ngFor="let hotel ofdealsdeals">
+			<app-hotel-deal>
+			</app-hotel-deal>
+		</div>
+	</div>
+
+	<div *ngIf="deals.length == 0" class="deals">
+		Currently there are no available deals
+	</div>
+
+</div>

@@ -1,0 +1,15 @@
+.hotel-deals {
+	margin: 60px 25% 0;
+}
+label {
+	font-size: 11px;
+}
+.filters {
+	border: 1px solid #eee;
+	padding: 20px;
+	padding-top: 0px;
+	background: #FFF;
+}
+.deals {
+	margin-top: 20px;
+}
