@@ -1,0 +1,22 @@
+{
+  "name": "hotel-deals-app",
+  "version": "1.0.0",
+  "description": "a simple app to consume json API and render results",
+  "main": "start.js",
+  "scripts": {
+    "start": "node ./start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rawanujoom/hotel-deals-app"
+  },
+  "author": "Rawan Nujoom <rawan.nujoom@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rawanujoom/hotel-deals-app/issues"
+  },
+  "homepage": "https://github.com/rawanujoom/hotel-deals-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
