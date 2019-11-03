@@ -1,13 +1,13 @@
-<div *ngIf="hotel['hotelInfo'].hotelName" class="row deal">
+<div *ngIf="hotel['hotelInfo']['hotelName']" class="row deal">
 	<div class="col-3 no-padding">
-		<img src="{{hotel['hotelInfo'].hotelImageUrl}}" width="150" height="150">
+		<img src="{{hotel['hotelInfo']['hotelImageUrl']}}" width="150" height="150">
 	</div>
 	<div class="col-9 no-padding">
 			<div class="row">	
 				<div class="col-7 no-padding">
-					<h5><a target="_blank" href="{{hotel.url}}">{{hotel['hotelInfo'].hotelName}}</a></h5>
+					<h5><a target="_blank" href="{{hotel['url']}}">{{hotel['hotelInfo']['hotelName']}}</a></h5>
 					<div><strong>{{hotel['destination'].city}} {{hotel['destination'].country}}</strong></div>
-					<div><small>{{hotel['hotelInfo'].hotelStreetAddress}}</small></div>
+					<div><small>{{hotel['hotelInfo']['hotelStreetAddress']}}</small></div>
 				</div>
 				<div class="col-5 text-right price-info">
 					<div>
@@ -20,9 +20,9 @@
 				</div>
 		</div>
 		<div class="rating">
-			<div><small>Stars: {{hotel['hotelInfo'].hotelStarRating}}<span *ngIf="hotel['hotelInfo'].hotelStarRating">/5.0</span></small>
+			<div><small>Stars: {{hotel['hotelInfo']['hotelStarRating']}}<span *ngIf="hotel['hotelInfo']['hotelStarRating']">/5.0</span></small>
 			</div>
-			<div><small>Guest Review: {{hotel['hotelInfo'].hotelGuestReviewRating}}<span *ngIf="hotel['hotelInfo'].hotelGuestReviewRating">/5.0</span></small>
+			<div><small>Guest Review: {{hotel['hotelInfo']['hotelGuestReviewRating']}}<span *ngIf="hotel['hotelInfo']['hotelGuestReviewRating']">/5.0</span></small>
 			</div>
 		</div>
 	</div>
