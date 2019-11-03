@@ -4,9 +4,10 @@ const express = require('express');
 var app = express();
 
 app
-    .use(bodyParser.json())
     /*Register Static content path*/
     .use(express.static(staticPath))
+    /*register api routers*/
+    .use('/hotel', require('./routes/hotel'))
     /*catch 404*/
     .use((req, res, next)=> {
         var err = new Error('Not Found');
