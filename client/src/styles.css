@@ -12,3 +12,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .margin-bottom-md {
 	margin-bottom: 10px;
 }
+
+.content {
+	background: #eee;
+	min-height:1000px;
+}
