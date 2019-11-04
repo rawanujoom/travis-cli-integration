@@ -10,9 +10,11 @@ var hotelDAO = {
 		request.get({
 			headers: {
 				'User-Agent': 'rawan-nujoom/1.0',
-				'Accept': 'application/json',
 				'Accept-Encoding': 'gzip, deflate, br',
-				'Accept-Language': 'en-US,en;q=0.9'
+				'Accept-Language': 'en-US,en;q=0.9',
+				'Connection': 'keep-alive',
+				'Cache-Control': 'max-age=0',
+				'Accept': 'application/json',
 			},
 			uri: _offersAPI,
 			qs: filters
