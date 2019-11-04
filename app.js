@@ -6,6 +6,9 @@ var app = express();
 app
     /*Register Static content path*/
     .use(express.static(staticPath))
+
+    .use(bodyParser.json({limit: '50mb'}))
+    .use(bodyParser.urlencoded({limit: '50mb', extended: true}))
     /*register api routers*/
     .use('/hotel', require('./routes/hotel'))
     /*catch 404*/
@@ -20,7 +23,6 @@ app
             console.error(err);
         }
         res.status(err.status || 500).json({
-            message: err.message,
             error: {}
         });
     })
