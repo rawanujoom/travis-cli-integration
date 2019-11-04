@@ -8,7 +8,7 @@ var hotelDAO = require('../DAO/hotel');
 var utils = require('../common/utils');
 
 router.post('/getOffers', jsonParser, hotelValidator.validateGetOffersRequest, function (req, res) {
-	var filters = req.body.filters;
+	var filters = req.body.filters || {};
 	// convert dates to utc to not consider user timezone
 	if (filters['minTripStartDate']) {
 		filters['minTripStartDate'] = utils.convertDateToUTC(filters['minTripStartDate']);
