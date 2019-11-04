@@ -15,26 +15,26 @@
 		</div>
 		<div class="form-group row">
 			<div class="col-6">
-				<label for="hotel-check-in">Check-in:</label>
-				<input type="text" id="hotel-check-in" class="form-control" placeholder="mm/dd/yyyy" name="hotel-check-in" [(ngModel)]="formFilters.minTripStartDate" bsDatepicker #d1="bsDatepicker" [bsConfig]="{containerClass: 'theme-dark-blue'}">
+				<label for="hotel-mintripstartdate">Min Trip Start Date:</label>
+				<input type="text" id="hotel-mintripstartdate" class="form-control" placeholder="yyyy-mm-dd" name="hotel-mintripstartdate" [(ngModel)]="formFilters.minTripStartDate" bsDatepicker #d1="bsDatepicker" [bsConfig]="{containerClass: 'theme-dark-blue'}">
 			</div>
 			<div class="col-6">
-				<label>Check-out:</label>
-				<input type="text" id="" class="form-control" placeholder="mm/dd/yyyy" name="hotel-check-out" [(ngModel)]="formFilters.maxTripStartDate" bsDatepicker #d1="bsDatepicker" [bsConfig]="{containerClass: 'theme-dark-blue'}">
+				<label>Min Trip Start Date:</label>
+				<input type="text" id="hotel-mintripstartdate" class="form-control" placeholder="yyyy-mm-dd" name="hotel-mintripstartdate" [(ngModel)]="formFilters.maxTripStartDate" bsDatepicker #d1="bsDatepicker" [bsConfig]="{containerClass: 'theme-dark-blue'}">
 			</div>
 		</div>
 		<div class="form-group">
 			<label>Length Of Stay:</label>
-			<input class="form-control" name="hotel-travelers" type="number" [(ngModel)]="formFilters.lengthOfStay">
+			<input class="form-control" name="hotel-lengthOfStay" type="number" [(ngModel)]="formFilters.lengthOfStay">
 		</div>
 		<div class="form-group row">
 			<div class="col-6">
 				<label>Minimum Total Room Rate:</label>
-				<input class="form-control" name="hotel-travelers" type="number" [(ngModel)]="formFilters.minTotalRate">
+				<input class="form-control" name="hotel-minTotalRate" type="number" [(ngModel)]="formFilters.minTotalRate">
 			</div>
 			<div class="col-6">
 				<label>Maximum Total Room Rate:</label>
-				<input class="form-control" name="hotel-travelers" type="number" [(ngModel)]="formFilters.maxTotalRate">
+				<input class="form-control" name="hotel-maxTotalRate" type="number" [(ngModel)]="formFilters.maxTotalRate">
 			</div>
 		</div>
 		<div class="form-group">

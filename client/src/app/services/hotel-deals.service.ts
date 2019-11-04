@@ -24,7 +24,7 @@ export class HotelDealsService {
 
 	getGuestRateOptions() {
 		return {
-			floor: 0,
+			floor: 1,
 			ceil: 5
 		}
 	}
