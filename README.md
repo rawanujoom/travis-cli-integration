@@ -12,6 +12,11 @@ to filter hotels based on trip start and end dates, these date params are conver
 4.  min/maxStarRating: integer range from 1 to 5 to filter hotels based on star rating assuming that expedia's API lowest hotel star rating is 1 and the heighest is 5.
 5.  min/maxTotalRate: integers starting from zero to filter hotels based on room costs.
 6. min/maxGuestRating: inter range from 1 to 5 to filters hotels based on guest rating assuming that expedia's API lowest guest rating is 1 and heighest is 5.
+#### Deals Listing
+* Each deal will show it's information of: hotelname, city, country, street, star rating, guest rating, crossed out price per night, dislay price per night, savings percent, currency. and if the user inserts length of stay night the total price will be shown as well. 
+* Deals are by default sorted by price asending, user has the option to sort by other options. 
+* Deals count is added as a text.
+
 
 ## Getting Started
 ### Prerequisites
@@ -21,6 +26,14 @@ install [Node.js](https://nodejs.org/en/download/) on your platform, current ver
 2. Run `npm run start` to start the application, you should see a message telling you that it's running on port 4000, now you can go to http://localhost:4000/.
 3. to add frontend work: 
 frontend is using angular framework that eventually created a bundled files. in order to generate these files, the following steps must be done:
-   3.1. in a new shell go to prject directory/client and run `npm install` to install frontend dependencies.
-   3.2. install angular cli by running `npm install -g @angular/cli`
-   3.3 in the same frontend shell run the command `ng build --watch`.
+   1. in a new shell go to prject directory/client and run `npm install` to install frontend dependencies.
+   2. install angular cli by running `npm install -g @angular/cli`
+   3. in the same frontend shell run the command `ng build --watch`.
+
+### Live Site
+This site is deployed on Heroku
+https://nodejs-hotel-deals-app.herokuapp.com/
+
+#### About the API: 
+- the API expects certain headers to be sent, suitable headers were used in the code.
+- the API response has some hotels with values of zero as guest rating, but when sending minGuestRating=0 the API does not return results, therefore the minGuestRating was restricted to start from 1.
