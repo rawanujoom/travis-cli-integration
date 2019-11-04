@@ -52,7 +52,15 @@
 	</form>
 	
 	<div class="deals">
-		<small *ngIf="deals.length > 0">Found {{deals.length}} Hotels</small>
+		<div class="text-right"><small class="text-right" *ngIf="deals.length > 0"><strong>Found {{deals.length}} Hotels</strong></small></div>
+		<div *ngIf="deals.length > 0" class="text-right">
+			<div class="form-group">
+				<label for="sort">Order Result By:</label>
+				<select id="sort" class="custom-select" [(ngModel)]="sortResultsBy" (change)="sortDataBy($event.target.value)">>
+					<option *ngFor="let option of sortOptions" [value]="option.val">{{option.text}}</option>
+				</select>
+			</div>
+		</div>
 		<div *ngFor="let hotel of deals">
 			<app-hotel-deal [hotel]="hotel" [numberOfstayNights]="formFilters.lengthOfStay">
 			</app-hotel-deal>
