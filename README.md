@@ -11,7 +11,7 @@ to filter hotels based on trip start and end dates, these date params are conver
 3. lengthOfStay: integer to filter number of trip days.
 4.  min/maxStarRating: integer range from 1 to 5 to filter hotels based on star rating assuming that expedia's API lowest hotel star rating is 1 and the heighest is 5.
 5.  min/maxTotalRate: integers starting from zero to filter hotels based on room costs.
-6. min/maxGuestRating: inter range from 0 to 5 to filters hotels based on guest rating assuming that expedia's API lowest guest rating is 0 and heighest is 5.
+6. min/maxGuestRating: inter range from 1 to 5 to filters hotels based on guest rating assuming that expedia's API lowest guest rating is 1 and heighest is 5.
 
 ## Getting Started
 ### Prerequisites
