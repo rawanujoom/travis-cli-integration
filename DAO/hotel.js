@@ -29,6 +29,7 @@ var hotelDAO = {
 			  // decompress response
 			  if (encoding == 'gzip') {
 			    zlib.gunzip(buffer, function(err, decoded) {
+			    	console.log("decoded: ",decoded)
 			      callback(err, decoded && decoded.toString());
 			    });
 			  } else if (encoding == 'deflate') {
