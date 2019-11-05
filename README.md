@@ -36,4 +36,6 @@ https://nodejs-hotel-deals-app.herokuapp.com/
 
 #### About the API: 
 - the API expects certain headers to be sent, suitable headers were used in the code.
-- the API response has some hotels with values of zero as guest rating, but when sending minGuestRating=0 the API does not return results, therefore the minGuestRating was restricted to start from 1.
+- the API response has some hotels with values of zero as guest rating, but when sending minGuestRating=0 the API does not return results, therefore the minGuestRating was restricted to start from 1. 
+
+
