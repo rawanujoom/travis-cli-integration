@@ -39,3 +39,5 @@ https://nodejs-hotel-deals-app.herokuapp.com/
 - the API response has some hotels with values of zero as guest rating, but when sending minGuestRating=0 the API does not return results, therefore the minGuestRating was restricted to start from 1. 
 
 
+
+
