@@ -31,7 +31,7 @@ chai.use(chaiHttp);
                 console.log("Done city search testing ") 
                 done() 
             }) 
-    }).timeout(10000); 
+    }).timeout(15000); 
   
   it ("Expect API to search by region ids", (done)=>{ 
  
@@ -49,7 +49,7 @@ chai.use(chaiHttp);
                 console.log("Done region ids search testing ") 
                 done() 
             }) 
-    }).timeout(10000); 
+    }).timeout(15000); 
   
     it ("Should provide rating between 1 and 5", (done)=>{ 
         chai.request(server) 
